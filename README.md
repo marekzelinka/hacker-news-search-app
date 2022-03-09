@@ -1,4 +1,4 @@
-## Hacker News Search App
+# Hacker News Search App
 
 Learn the basics of building a Node.js application with Express and Pug by building an application that searches Hacker News' top stories.
 
@@ -13,7 +13,7 @@ You must have Node.js and npm installed on your machine. This project was built 
 - Node.js v16.14.0.
 - npm v8.3.1.
 
-## 📦 Setup
+## 📦 Getting started
 
 - Clone this repo to your machine
 
