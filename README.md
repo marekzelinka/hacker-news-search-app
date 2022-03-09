@@ -1,6 +1,6 @@
 # Hacker News Search App
 
-Learn the basics of building a Node.js application with Express and Pug by building an application that searches Hacker News' top stories.
+Learn the basics of building Node.js websites with Express and Pug by developing an application that searches Hacker News' top stories.
 
 **Full tutorial**: [How to Build a Node.js Application with Express and Pug](https://betterstack.com/community/guides/scaling-nodejs/build-nodejs-application-express-pug).
 
