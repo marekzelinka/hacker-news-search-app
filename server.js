@@ -2,6 +2,14 @@ import axios from 'axios';
 import * as dateFns from 'date-fns';
 import express from 'express';
 import path from 'node:path';
+import { createClient } from 'redis';
+
+const client = await createClient()
+  .on('error', (error) => console.error('Redis Client Error', error))
+  .on('ready', () => console.info('Redis client started'))
+  .connect();
+
+await client.ping();
 
 const app = express();
 
@@ -55,5 +63,5 @@ app.use((error, _req, res, _next) => {
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
-  console.log(`Hacker news server started on port: ${server.address().port}`);
+  console.info(`Hacker news server started on port: ${server.address().port}`);
 });
