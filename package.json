@@ -1,21 +1,21 @@
 {
-  "name": "hacker-news",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "dev": "npx pm2-dev server.js",
-    "start": "npx pm2 start server.js"
+    "dev": "pm2-dev server.js",
+    "start": "pm2 start server.js",
+    "format": "prettier . -w"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
-    "date-fns": "^2.27.0",
-    "express": "^4.17.1",
-    "pug": "^3.0.2"
+    "axios": "^1.7.7",
+    "date-fns": "^2.30.0",
+    "express": "^4.21.1",
+    "pug": "^3.0.3"
   },
   "devDependencies": {
-    "pm2": "^5.1.2"
-  }
+    "pm2": "^5.4.2",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.1.0"
+  },
+  "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4"
 }
