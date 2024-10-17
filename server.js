@@ -42,7 +42,20 @@ app.get('/search', async (req, res, next) => {
       return;
     }
 
-    const results = await searchHN(searchQuery);
+    let results = null;
+
+    const key = `search:${searchQuery.toLowerCase()}`;
+    const cachedResults = await client.get(key);
+
+    if (cachedResults) {
+      results = JSON.parse(cachedResults);
+      console.log('cache hit');
+    } else {
+      results = await searchHN(searchQuery);
+      console.log('cache miss');
+
+      await client.set(key, JSON.stringify(results), { EX: 300 });
+    }
 
     res.render('search', {
       title: `Search results for: ${searchQuery}`,
