@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "pm2-dev server.js",
     "start": "pm2 start server.js",
